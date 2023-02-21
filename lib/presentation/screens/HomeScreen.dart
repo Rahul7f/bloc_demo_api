@@ -11,7 +11,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => UserBloc(ApiRepository())..add(LoadUserEvent()),
+      create: (context) => UserBloc(
+          RepositoryProvider.of<ApiRepository>(context)
+      )..add(LoadUserEvent()),
       child: BlocBuilder<UserBloc, UserState>(
         builder: (context, state) {
           if(state is UsersLoadingState){
