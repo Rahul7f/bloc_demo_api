@@ -41,3 +41,8 @@ class AlreadyLoginState extends LoginState {
   List<Object> get props => [];
 }
 
+class NotLoginState extends LoginState {
+  @override
+  List<Object> get props => [];
+}
+

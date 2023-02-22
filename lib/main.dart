@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learn_bloc/presentation/screens/HomeScreen.dart';
 import 'package:bloc/bloc.dart';
 import 'package:learn_bloc/presentation/screens/login_screen.dart';
+import 'package:learn_bloc/presentation/screens/splash_screen.dart';
 import 'package:learn_bloc/service/api_repository.dart';
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.orange,
       ),
       // home: RepositoryProvider(create: (context) => ApiRepository(), child:  const HomeScreen()),
-      home: LoginScreen(),
+      home:  SplashScreen(),
     );
   }
 }

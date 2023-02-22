@@ -43,6 +43,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       final bool? login = prefs.getBool('login');
       if(login!=null && login==true){
         emit(AlreadyLoginState());
+      }else{
+        emit(NotLoginState());
       }
     });
 

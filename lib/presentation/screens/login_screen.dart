@@ -33,9 +33,6 @@ class LoginScreen extends StatelessWidget {
             if (state is LoginFailedState) {
               showInSnackBar(state.error,context,state.status);
             }
-            if (state is AlreadyLoginState) {
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen(),));
-            }
           },
           builder: (context, state) {
             return Padding(
