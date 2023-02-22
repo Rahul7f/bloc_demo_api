@@ -6,13 +6,15 @@ import '../../logic/bloc/user_bloc/user_bloc.dart';
 import '../../model/UserModel.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+   HomeScreen({Key? key}) : super(key: key);
+  ApiRepository _apiRepository = ApiRepository();
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => UserBloc(
-          RepositoryProvider.of<ApiRepository>(context)
+          // RepositoryProvider.of<ApiRepository>(context)
+          _apiRepository
       )..add(LoadUserEvent()),
       child: BlocBuilder<UserBloc, UserState>(
         builder: (context, state) {

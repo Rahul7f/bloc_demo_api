@@ -21,7 +21,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
          emit(UsersErrorState("Data is NULL"));
        }
      }catch(e){
-       emit(UsersErrorState("Api not Working"));
+       emit(UsersErrorState("Api not Working ${e.toString()}"));
 
      }
     });

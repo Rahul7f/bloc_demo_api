@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: RepositoryProvider(create: (context) => ApiRepository(), child:  const HomeScreen()),
-      // home: LoginScreen(),
+      // home: RepositoryProvider(create: (context) => ApiRepository(), child:  const HomeScreen()),
+      home: LoginScreen(),
     );
   }
 }
